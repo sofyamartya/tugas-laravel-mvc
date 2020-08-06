@@ -11,10 +11,18 @@
 |
 */
 
-Route::get('/', 'HomeController@home');
+Route::get('/home', 'HomeController@home');
 Route::get('/register', 'AuthController@register');
 Route::post('/welcome', 'AuthController@welcome');
 
 Route::get('/master', function() {
-  return view('master');
+  return view('layouts_adminlte.master');
+});
+
+Route::get('/', function() {
+  return view('templating_task.index');
+});
+
+Route::get('/data_tables', function() {
+  return view('templating_task.data_tables');
 });
