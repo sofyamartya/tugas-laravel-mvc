@@ -439,9 +439,9 @@
     </div>
     <!-- /.card-body -->
   </div>
-Pada halaman data-tables kita membutuhkan asset CSS dan JS dari plugin data-tables. asset Javascript di antaranya datatables dan datatables-bs4 berikut ini script yang dibutuhkan (sesuaikan alamat asset dengan alamat yang ada di dalam project public).
+@endsection
 
-
+@push('script')
 <script src="../../plugins/datatables/jquery.dataTables.js"></script>
 <script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
 <script>
@@ -449,4 +449,4 @@ $(function () {
   $("#example1").DataTable();
 });
 </script>
-@endsection
+@endpush
