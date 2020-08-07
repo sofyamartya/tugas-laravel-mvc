@@ -15,10 +15,7 @@ Route::get('/home', 'HomeController@home');
 Route::get('/register', 'AuthController@register');
 Route::post('/welcome', 'AuthController@welcome');
 
-Route::get('/master', function() {
-  return view('layouts_adminlte.master');
-});
-
+//templating task
 Route::get('/', function() {
   return view('templating_task.index');
 });
