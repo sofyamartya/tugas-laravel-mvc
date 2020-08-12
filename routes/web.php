@@ -23,3 +23,11 @@ Route::get('/', function() {
 Route::get('/data_tables', function() {
   return view('templating_task.data_tables');
 });
+
+Route::get('/pertanyaan', 'PertanyaanController@index');
+Route::get('/pertanyaan/create', 'PertanyaanController@create');
+Route::post('/pertanyaan', 'PertanyaanController@store');
+Route::get('/pertanyaan/{pertanyaan_id}', 'PertanyaanController@show');
+Route::get('/pertanyaan/{pertanyaan_id}/edit', 'PertanyaanController@edit');
+Route::put('/pertanyaan/{pertanyaan_id}', 'PertanyaanController@update');
+Route::delete('/pertanyaan/{pertanyaan_id}', 'PertanyaanController@destroy');
